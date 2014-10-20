@@ -1,2 +1,12 @@
 <h1>Listing Albums</h1>
 <p>no albums available/i</p>
+
+<ul>
+    <% @albums.each do |album| %>
+   <li class="album"><%= album.title %></li>
+   <ul>
+       <li class="artist"><%= album.artist %></li>
+       <li class="year"><%= album.year %></li>
+   </ul>
+   <% end %>
+</ul>
