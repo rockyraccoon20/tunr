@@ -6,7 +6,8 @@
 	<%else%>
 
     <% @albums.each do |album| %>
-   <li class="album"><%= album.title %></li>
+   <li class="album"><%= album.title %>
+	<%= link_to 'Edit', edit_album_path(album) %></li>
    <ul>
        <li class="artist"><%= album.artist %></li>
        <li class="year"><%= album.year %></li>
@@ -14,3 +15,5 @@
    <% end %>
    <% end %>
 </ul>
+<br>
+<%= link_to 'New Album', new_album_path %>
