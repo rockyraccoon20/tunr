@@ -1,0 +1,14 @@
+<h1>Sign In Page, welcome</h1>
+
+<%= render 'common/flash' %>
+
+<%= form_for :session, url: sessions_path do |f| %>
+	<%= f.label :email %>
+	<%= f.text_field :email %>
+
+	<%= f.label :password %>
+	<%= f.text_field :password %>
+
+	<%= f.submit "Sign In", id: "signin" %>
+
+<% end %>
