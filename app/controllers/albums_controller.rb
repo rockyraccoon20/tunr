@@ -1,4 +1,5 @@
 class AlbumsController < ApplicationController
+	skip_before_action :require_signin, only: [:new, :create, :index]
 	before_filter :set_album, only: [:show, :edit, :update]
 	def index
 		@albums = Album.all
