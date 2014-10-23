@@ -1,16 +1,4 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
-  resources :albums
-=======
-
-  resources :users
-  resources :sessions, only: [:new, :create]
-
-  get '/signup', to: 'users#new'
-  get '/signin', to: 'sessions#new'
-  delete '/signout', to: 'sessions#destroy'
-  
->>>>>>> master
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
